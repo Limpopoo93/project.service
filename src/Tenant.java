@@ -28,4 +28,19 @@ class Tenant { //квартирант
                 ", numberRoom=" + numberRoom +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tenant tenant = (Tenant) o;
+        if (numberRoom != tenant.numberRoom) return false;
+        return name != null ? name.equals(tenant.name) : tenant.name == null;
+    }
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + numberRoom;
+        return result;
+    }
 }

@@ -31,4 +31,24 @@ class Request {
                 ", timePerfomance=" + timePerfomance +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Request request = (Request) o;
+        if (Double.compare(request.scale, scale) != 0) return false;
+        if (timePerfomance != request.timePerfomance) return false;
+        return typeWork != null ? typeWork.equals(request.typeWork) : request.typeWork == null;
+    }
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = typeWork != null ? typeWork.hashCode() : 0;
+        temp = Double.doubleToLongBits(scale);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + timePerfomance;
+        return result;
+    }
 }
