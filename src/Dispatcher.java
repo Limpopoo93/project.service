@@ -7,5 +7,6 @@ import java.util.ArrayList;
 
 class Dispatchar { // диспетчер
 
+
     }
 

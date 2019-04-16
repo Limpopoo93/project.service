@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/package com.marachkou.services.common.iml" filepath="$PROJECT_DIR$/package com.marachkou.services.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/package by.epam.communalServices.iml" filepath="$PROJECT_DIR$/package by.epam.communalServices.iml" />
     </modules>
   </component>
 </project>
